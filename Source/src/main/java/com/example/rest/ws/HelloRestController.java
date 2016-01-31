@@ -10,8 +10,8 @@ import java.util.concurrent.atomic.AtomicLong;
 public class HelloRestController {
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping(value = "/user", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
+    @RequestMapping(value = "/user", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Greeting hello(@RequestParam(value = "name", defaultValue = "World") String name) {
 
         //returns the view name
